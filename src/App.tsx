@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 
-import {  Flex } from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/layout'
 
 import { getQuestions } from './api/api'
 
@@ -8,12 +8,15 @@ import config from './config/quiz'
 
 import { Quiz } from './types/quiz'
 
+import { PreferencesContext } from './context/PreferencesContext'
+
 import Header from './components/Ui/Header'
 import QuestionCard from './components/QuestionCard'
 import StartPanel from './components/StartPanel'
 
-import './App.css'
 import GameOverPanel from './components/GameOverPanel'
+
+import './App.css'
 
 const initialState = {
   questions: [],
@@ -25,18 +28,19 @@ const initialState = {
 }
 
 function App() {
+  
+  const { preferences } = useContext(PreferencesContext);
   const [loading, setLoading] = useState(false)
   const [configQuiz, setConfigQuiz] = useState<Quiz>(initialState)
 
   const { questions, answers, totalScore, isGameOver, isLeft, currentNumberQuestion } =
     configQuiz
 
-
   const leftGame = () => setConfigQuiz(initialState)
 
   const startGame = () => {
     setLoading(true)
-    getQuestions(config.totalQuestions)
+    getQuestions(config.totalQuestions, preferences.idCategory, preferences.difficulty)
       .then((questions) => {
         setConfigQuiz((configQuiz) => ({
           ...configQuiz,
@@ -89,22 +93,10 @@ function App() {
   return (
     <Flex
       direction='column'
-      alignSelf='center'
-      justifySelf='center'
-      width='100%'
-    >
-      <Flex
-        direction='column'
-        textAlign='center'
-        justifyContent='center'
-        align='center'
-        mt='0.8rem'
-      >
-        <Header content='Quiz React App' />
-      </Flex>
-      { isLeft && <StartPanel startGame={ startGame} /> }
+      p={10}>
+      <Header content='Trivia Game' />
+      { isLeft && <StartPanel startGame={ startGame} isLoading={ loading }/> }
       { isGameOver && <GameOverPanel score={ totalScore } nextQuiz={ leftGame }/> }
-      { loading && <p>Loading...</p> }
       { !isLeft && !isGameOver && (
         <QuestionCard
           question={ questions[currentNumberQuestion]?.question }

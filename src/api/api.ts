@@ -1,23 +1,11 @@
 import { shuffleArray } from "../helpers/shuffleArray";
-import { Difficulty, Question } from "../types/quiz";
+import { Question } from "../types/quiz";
 
-// enum Difficulty {
-//   EASY = "easy",
-//   MEDIUM = "medium",
-//   HARD = "hard"
-// }
-
-
-export const getQuestions = async (amount: number) => {
+export const getQuestions = async (amount: number, idCategory: number, difficulty: string) => {
   
   let filterCategory = ''
-  
-  const difficulty = localStorage.getItem('difficulty')
-  
-  const idCategory = localStorage.getItem('category')
 
-  //FIXME: I have problems when User select any category
-  if(idCategory){
+  if(idCategory !== 1){
     filterCategory = `&category=${ idCategory }`
   }
 

@@ -1,7 +1,7 @@
 import config from "../config/quiz"
 import SadImage from '../assets/images/sad.png'
 import HappyImage from '../assets/images/happy.png'
-import ConfusedImage from '../assets/images/sad.png'
+import ConfusedImage from '../assets/images/confused.png'
 
 
 export const getMessageByScore = (score: number) => {

@@ -16,7 +16,7 @@ const GameOverPanel = ({ score, nextQuiz }: Props) => {
   const messageByScore = getMessageByScore(score);
 
   return (
-    <Flex flexDirection='column' alignItems='center'>
+    <Flex flexDirection='column' alignItems='center' mt={10}>
       <Image
         boxSize="150px"
         objectFit="cover"
@@ -32,20 +32,20 @@ const GameOverPanel = ({ score, nextQuiz }: Props) => {
         { score } / { config.totalQuestions }
       </Text>
       <Flex mt={10}>
-          <Button 
-            leftIcon={<DownloadIcon />}
-            backgroundColor="gray.200" 
-            mr={20}>
-            Download Results
-          </Button>
-          <Spacer />
-          <Button
-            backgroundColor="cyan.400"
-            color="white"
-            onClick={ nextQuiz }>
-            Take New Quiz
-          </Button>
-        </Flex>
+        <Button 
+          leftIcon={<DownloadIcon />}
+          backgroundColor="gray.200" 
+          mr={20}>
+          Download Results
+        </Button>
+        <Spacer />
+        <Button
+          colorScheme="cyan"
+          color="white"
+          onClick={ nextQuiz }>
+          Take New Quiz
+        </Button>
+      </Flex>
     </Flex>
   )
 }

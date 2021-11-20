@@ -1,4 +1,5 @@
-import { Heading } from '@chakra-ui/layout'
+import { Heading, Text, Container } from '@chakra-ui/layout'
+import { Stack } from '@chakra-ui/react'
 
 type Props = {
   content: string;
@@ -6,13 +7,15 @@ type Props = {
 
 const Header = ({ content }: Props) => {
   return (
-    <Heading 
-      fontSize='4xl' 
-      className='color-text'
-      mt={50}
-      mb={20}>
+    <Stack as={Container} textAlign={'center'}>
+      <Heading 
+        fontSize='4xl' 
+        style={{ color: '#12c69d' }}
+        mb={10}>
         { content }
-    </Heading>
+      </Heading>
+    </Stack>
+    
   )
 }
 

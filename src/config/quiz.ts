@@ -13,7 +13,6 @@ import AnimalIcon from '../assets/svg/animal-icon.svg'
 import ComicIcon from '../assets/svg/comic-icon.svg'
 import AnyIcon from '../assets/svg/any-icon.svg'
 
-
 const TOTAL_QUESTIONS = 10
 
 const CATEGORIES: Category[] = [
@@ -33,7 +32,6 @@ const CATEGORIES: Category[] = [
 
 const config = {
   totalQuestions: TOTAL_QUESTIONS,
-  difficulty: 'medium',
   categories: CATEGORIES
 }
 

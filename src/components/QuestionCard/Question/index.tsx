@@ -11,7 +11,7 @@ type Props = {
 const Question = ({ title, currentNumberQuestion }: Props) => {
   return (
     <>
-      <Text color='white' fontWeight='bold' fontSize='4xl'>
+      <Text color='white' fontWeight='bold' fontSize='3xl'>
         Question: { currentNumberQuestion + 1 } / { config.totalQuestions }
       </Text>
       <Divider marginTop='2' marginBottom='4'/>

@@ -1,7 +1,19 @@
+export enum Difficulty {
+  EASY = 'easy',
+  MEDIUM = 'medium',
+  HARD = 'hard'
+}
+
+export type Category = {
+  id: number
+  name: string
+  icon: string
+}
+
 export type Question = {
   category: string
   correct_answer: string
-  difficulty: Difficulty
+  difficulty: string
   incorrect_answers: string[]
   question: string
   type: string
@@ -15,8 +27,6 @@ export type Answer = {
   correct_answer: string
 }
 
-export type Difficulty = "easy" | "medium" | "hard"
-
 export type Quiz = {
   questions: Question[]
   answers: Answer[]
@@ -26,8 +36,7 @@ export type Quiz = {
   currentNumberQuestion: number
 }
 
-export type Category = {
-  id: number
-  name: string
-  icon: string
+export type Preferences = {
+  idCategory: number
+  difficulty: string
 }

@@ -29,10 +29,12 @@ const Alternative = ({
         color={ color }
         borderColor={ color }
         boxShadow='none'
-        pointerEvents={isDisabled ? 'none' : 'auto'}
+        pointerEvents={ isDisabled ? 'none' : 'auto' }
         variant='outline'
-        value={title}
-        onClick={checkAnswer}
+        value={ title }
+        onClick={ checkAnswer }
+        outline='none'
+        _hover={{ bg: "rgba(144, 205, 244, 0.10)" }}
       >
         <Text dangerouslySetInnerHTML={{ __html: title }} />
       </Button>
