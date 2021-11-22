@@ -1,6 +1,6 @@
 {
   "name": "quiz-ts-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -16,6 +16,7 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
