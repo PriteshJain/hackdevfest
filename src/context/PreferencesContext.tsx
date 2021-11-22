@@ -1,18 +1,14 @@
 import React, { useState } from "react"
-import { Difficulty, Preferences } from "../types/quiz"
+import config from "../config/quiz"
+import {  Preferences } from "../types/quiz"
 
 type StatePreferences = {
   preferences: Preferences,
   setPreferences: React.Dispatch<React.SetStateAction<Preferences>>
 }
 
-const initialState = {
-  idCategory: 1,
-  difficulty: Difficulty.EASY
-}
-
 export const PreferencesContext = React.createContext<StatePreferences>({
-  preferences: initialState,
+  preferences: config.preferences,
   setPreferences: () => undefined
 })
 
@@ -22,7 +18,7 @@ type Props = {
 
 export const PreferencesProvider = ({ children }: Props) => {
 
-  const [preferences, setPreferences] = useState<Preferences>(initialState);
+  const [preferences, setPreferences] = useState<Preferences>(config.preferences);
 
   return (
     <PreferencesContext.Provider value={{ preferences, setPreferences }}>

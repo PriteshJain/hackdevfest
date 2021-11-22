@@ -13,10 +13,13 @@ const InstructionsPanel = () => {
         fontSize='2xl' 
         mb={5}>Instructions</Text>
       <Text color='white' fontSize='md' mb={5}>
-        First, choose any difficulty and then choose from a list of categories.
+        First, choose any difficulty and then choose one category from list.
       </Text>
       <Text color='white' fontSize='md' mb={5}>
-        Test your kwnoledge. Good Luck !
+        Finally. press on START QUIZ.
+      </Text>
+      <Text color='white' fontSize='md' mb={5}>
+        Test your knowledge. Good Luck !
       </Text>
     </Box>
   )

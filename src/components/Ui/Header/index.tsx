@@ -10,7 +10,7 @@ const Header = ({ content }: Props) => {
     <Stack as={Container} textAlign={'center'}>
       <Heading 
         fontSize='4xl' 
-        style={{ color: '#12c69d' }}
+        color='#12c69d'
         mb={10}>
         { content }
       </Heading>

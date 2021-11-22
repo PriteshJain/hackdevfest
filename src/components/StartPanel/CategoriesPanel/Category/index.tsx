@@ -29,7 +29,7 @@ const Category = ({ id, name, icon }: Props) => {
                   padding='6px'
                   align='center'
                   justify='center'
-                  onClick={ () =>  setPreferences((prevPref) => ({ ...prevPref, idCategory: id }))}
+                  onClick={ () =>  setPreferences((prevPref) => ({ ...prevPref, idCategory: id, nameCategory: name }))}
                   whileHover={{ scale: 1.1 }}>
       <Flex mb={1}>
         <Image src={ icon } alt={ name } width='24' height='24' />

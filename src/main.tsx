@@ -6,9 +6,6 @@ import { PreferencesProvider } from './context/PreferencesContext'
 
 import App from './App'
 
-
-import './index.css'
-
 ReactDOM.render(
   <ChakraProvider>
     <PreferencesProvider>

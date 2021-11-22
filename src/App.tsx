@@ -13,7 +13,6 @@ import { PreferencesContext } from './context/PreferencesContext'
 import Header from './components/Ui/Header'
 import QuestionCard from './components/QuestionCard'
 import StartPanel from './components/StartPanel'
-
 import GameOverPanel from './components/GameOverPanel'
 
 import './App.css'
@@ -27,16 +26,20 @@ const initialState = {
   currentNumberQuestion: 0,
 }
 
-function App() {
+const App = () => {
   
-  const { preferences } = useContext(PreferencesContext);
-  const [loading, setLoading] = useState(false)
+  const { preferences, setPreferences } = useContext(PreferencesContext)
+  const [loading, setLoading] = useState<boolean>(false)
   const [configQuiz, setConfigQuiz] = useState<Quiz>(initialState)
+  const [isButtonNextDisabled, setIsButtonNextDisabled ] = useState<boolean>(true)
 
-  const { questions, answers, totalScore, isGameOver, isLeft, currentNumberQuestion } =
-    configQuiz
+  const { questions, answers, totalScore, isGameOver, isLeft, currentNumberQuestion } = configQuiz
 
-  const leftGame = () => setConfigQuiz(initialState)
+  const leftGame = () => {
+    setPreferences(config.preferences)
+    setConfigQuiz(initialState)
+    setIsButtonNextDisabled(true)
+  }
 
   const startGame = () => {
     setLoading(true)
@@ -56,15 +59,19 @@ function App() {
 
     if (nextQuestion === config.totalQuestions)
       setConfigQuiz((configQuiz) => ({ ...configQuiz, isGameOver: true }));
-    else
-      setConfigQuiz((configQuiz) => ({
-        ...configQuiz,
-        currentNumberQuestion: nextQuestion,
-      }))
+    else{
+      setConfigQuiz((configQuiz) => ({ ...configQuiz, currentNumberQuestion: nextQuestion }))
+
+      setIsButtonNextDisabled(true)
+
+    }
   }
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!isGameOver) {
+
+      setIsButtonNextDisabled(false)
+
       const userAnswer = e.currentTarget.value
 
       const isCorrect =
@@ -106,6 +113,7 @@ function App() {
           nextQuestion={ nextQuestion }
           userAnswer={ answers ? answers[currentNumberQuestion] : undefined }
           currentNumberQuestion={ currentNumberQuestion }
+          isDisabled={ isButtonNextDisabled }
         />
       )}
     </Flex>

@@ -1,4 +1,4 @@
-import { Category } from '../types/quiz'
+import { Category, Difficulty } from '../types/quiz'
 
 import MovieIcon from '../assets/svg/movie-icon.svg'
 import MusicIcon from '../assets/svg/music-icon.svg'
@@ -8,7 +8,7 @@ import MathIcon from '../assets/svg/math-icon.svg'
 import MythologyIcon from '../assets/svg/mythology-icon.svg'
 import SportIcon from '../assets/svg/sport-icon.svg'
 import HistoryIcon from '../assets/svg/history-icon.svg'
-import ArtIcon from '../assets/svg/art-icon.svg'
+import VehicleIcon from '../assets/svg/vehicle-icon.svg'
 import AnimalIcon from '../assets/svg/animal-icon.svg'
 import ComicIcon from '../assets/svg/comic-icon.svg'
 import AnyIcon from '../assets/svg/any-icon.svg'
@@ -25,14 +25,19 @@ const CATEGORIES: Category[] = [
   { id: 20, name: 'Mythology', icon: MythologyIcon },
   { id: 21, name: 'Sports', icon: SportIcon },
   { id: 23, name: 'History', icon: HistoryIcon },
-  { id: 25, name: 'Art', icon: ArtIcon },
   { id: 27, name: 'Animals', icon: AnimalIcon },
+  { id: 28, name: 'Vehicles', icon: VehicleIcon },
   { id: 29, name: 'Comics', icon: ComicIcon },
 ]
 
 const config = {
   totalQuestions: TOTAL_QUESTIONS,
-  categories: CATEGORIES
+  categories: CATEGORIES,
+  preferences: {
+    idCategory: 1,
+    nameCategory: 'ANY',
+    difficulty: Difficulty.EASY
+  }
 }
 
 export default config

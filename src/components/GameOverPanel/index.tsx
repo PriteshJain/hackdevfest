@@ -1,10 +1,9 @@
-import { Flex, Heading, Spacer, Text } from "@chakra-ui/layout"
-import { Button } from "@chakra-ui/button"
-import { Image } from "@chakra-ui/image"
+import { Flex, Heading, Spacer, Text } from '@chakra-ui/layout'
+import { Button } from '@chakra-ui/button'
+import { Image } from '@chakra-ui/image'
 
-import config from "../../config/quiz"
-import { getMessageByScore } from "../../helpers/getMessageByScore"
-import { DownloadIcon } from "@chakra-ui/icons"
+import config from '../../config/quiz'
+import { getMessageByScore } from '../../helpers/getMessageByScore'
 
 type Props = {
   score: number
@@ -18,11 +17,11 @@ const GameOverPanel = ({ score, nextQuiz }: Props) => {
   return (
     <Flex flexDirection='column' alignItems='center' mt={10}>
       <Image
-        boxSize="150px"
-        objectFit="cover"
+        boxSize='150px'
+        objectFit='cover'
         src={ messageByScore.image }
         alt={ messageByScore.message }/>
-      <Heading as="h1" size="xl" mt={6} mb={6} color='white' fontWeight='bold'>
+      <Heading as='h1' size='xl' mt={6} mb={6} color='white' fontWeight='bold'>
         { messageByScore.message }
       </Heading>
       <Text color='white' fontWeight='bold' letterSpacing='3px'>
@@ -32,16 +31,9 @@ const GameOverPanel = ({ score, nextQuiz }: Props) => {
         { score } / { config.totalQuestions }
       </Text>
       <Flex mt={10}>
-        <Button 
-          leftIcon={<DownloadIcon />}
-          backgroundColor="gray.200" 
-          mr={20}>
-          Download Results
-        </Button>
-        <Spacer />
         <Button
-          colorScheme="cyan"
-          color="white"
+          colorScheme='cyan'
+          color='white'
           onClick={ nextQuiz }>
           Take New Quiz
         </Button>
