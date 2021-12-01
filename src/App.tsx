@@ -2,6 +2,8 @@ import React, { useState,useContext } from 'react'
 
 import { Flex } from '@chakra-ui/layout'
 
+import useSound from 'use-sound'
+
 import { getQuestions } from './api/api'
 
 import config from './config/quiz'
@@ -15,6 +17,9 @@ import QuestionCard from './components/QuestionCard'
 import StartPanel from './components/StartPanel'
 import GameOverPanel from './components/GameOverPanel'
 
+import correctSound from './assets/sounds/correct.mp3'
+import incorrectSound from './assets/sounds/incorrect.mp3'
+
 import './App.css'
 
 const initialState = {
@@ -27,6 +32,9 @@ const initialState = {
 }
 
 const App = () => {
+
+  const [playCorrect] = useSound(correctSound)
+  const [playIncorrect] = useSound(incorrectSound)
   
   const { preferences, setPreferences } = useContext(PreferencesContext)
   const [loading, setLoading] = useState<boolean>(false)
@@ -77,11 +85,18 @@ const App = () => {
       const isCorrect =
         questions[currentNumberQuestion].correct_answer === userAnswer
 
-      if (isCorrect)
+      if (isCorrect){
+
         setConfigQuiz((configQuiz) => ({
           ...configQuiz,
           totalScore: configQuiz.totalScore + 1,
         }))
+
+        playCorrect();
+        
+      }else {
+        playIncorrect();
+      }
 
       const answer = {
         question: questions[currentNumberQuestion].question,

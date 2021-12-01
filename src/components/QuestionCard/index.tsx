@@ -1,8 +1,9 @@
+import { Container } from '@chakra-ui/react'
 import { Box, Stack, Flex, Spacer } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/button'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 
-import { Answer } from '../../types/quiz';
+import { Answer } from '../../types/quiz'
 
 import Alternative from './Alternative'
 import Question from './Question'
@@ -16,7 +17,7 @@ type Props = {
   userAnswer: Answer | undefined
   currentNumberQuestion: number
   isDisabled: boolean
-};
+}
 
 const QuestionCard = ({
   question,
@@ -30,7 +31,7 @@ const QuestionCard = ({
 }: Props) => {
 
   return (
-    <Box mb='4'>
+    <Stack as={Container}>
       <Box mb='6'>
         <Question
           title={question}
@@ -70,8 +71,8 @@ const QuestionCard = ({
           Next
         </Button>
       </Flex>
-    </Box>
+    </Stack>
   );
 };
 
-export default QuestionCard;
+export default QuestionCard

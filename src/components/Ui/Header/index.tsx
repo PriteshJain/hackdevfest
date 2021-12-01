@@ -2,7 +2,7 @@ import { Heading, Text, Container } from '@chakra-ui/layout'
 import { Stack } from '@chakra-ui/react'
 
 type Props = {
-  content: string;
+  content: string
 }
 
 const Header = ({ content }: Props) => {

@@ -9,19 +9,14 @@ type Props = {
   checkAnswer: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const Alternative = ({
-  title,
-  isDisabled,
-  isCorrect,
-  isUserClicked,
-  checkAnswer,
-}: Props) => {
+const Alternative = ({ title,isDisabled,isCorrect,isUserClicked,checkAnswer }: Props) => {
 
   const color = isCorrect 
     ? '#12c69d' 
     : !isCorrect && isUserClicked 
     ? 'red.400' 
     : '#aeb2bd'
+
 
   return (
     <Stack spacing='3'>
