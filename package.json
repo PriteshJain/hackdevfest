@@ -11,13 +11,13 @@
     "@chakra-ui/react": "^1.7.1",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@types/howler": "^2.2.4",
     "framer-motion": "^4.1.17",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@types/howler": "^2.2.4",
     "@types/next": "^9.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
