@@ -2,7 +2,7 @@ import React, { useState,useContext } from 'react'
 
 import { Flex } from '@chakra-ui/layout'
 
-import useSound from 'use-sound'
+import useSound from './hooks/useSound';
 
 import { getQuestions } from './api/api'
 
