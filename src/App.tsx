@@ -114,7 +114,7 @@ const App = () => {
     <Flex
       direction='column'
       p={10}>
-      <Header content='Trivia Game' />
+      <Header content='Triviamind' />
       { isLeft && <StartPanel startGame={ startGame} isLoading={ loading }/> }
       { isGameOver && <GameOverPanel score={ totalScore } nextQuiz={ leftGame }/> }
       { !isLeft && !isGameOver && (
