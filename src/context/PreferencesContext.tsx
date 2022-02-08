@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import config from '../config/quiz'
-import {  Preferences } from '../types/quiz'
+import config from 'config/quiz'
+import {  Preferences } from 'types/quiz'
 
 type StatePreferences = {
   preferences: Preferences

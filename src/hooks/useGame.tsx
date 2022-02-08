@@ -2,15 +2,15 @@ import React, { useState,useContext } from 'react'
 
 import useSound from './useSound'
 
-import { PreferencesContext } from '../context/PreferencesContext'
+import { PreferencesContext } from 'context/PreferencesContext'
 
-import { getQuestions } from '../api/api'
-import { Quiz } from '../types/quiz'
+import { getQuestions } from 'api/api'
+import { Quiz } from 'types/quiz'
 
-import correctSound from '../assets/sounds/correct.mp3'
-import incorrectSound from '../assets/sounds/incorrect.mp3'
+import correctSound from 'assets/sounds/correct.mp3'
+import incorrectSound from 'assets/sounds/incorrect.mp3'
 
-import config from '../config/quiz'
+import config from 'config/quiz'
 
 const useGame = (initialState: Quiz) => {
 

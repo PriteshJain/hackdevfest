@@ -3,9 +3,9 @@ import { useContext } from 'react'
 import { Divider } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/layout'
 
-import config from '../../../config/quiz'
+import config from 'config/quiz'
 
-import { PreferencesContext } from '../../../context/PreferencesContext'
+import { PreferencesContext } from 'context/PreferencesContext'
 
 type Props = {
   title: string;

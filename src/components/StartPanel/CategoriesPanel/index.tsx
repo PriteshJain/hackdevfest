@@ -1,6 +1,6 @@
 import { Box, SimpleGrid, Text } from '@chakra-ui/react'
 
-import config from '../../../config/quiz'
+import config from 'config/quiz'
 
 import Category from './Category'
 

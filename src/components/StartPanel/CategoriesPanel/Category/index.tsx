@@ -4,7 +4,7 @@ import { Text, Flex, Image, Stack, StackProps } from '@chakra-ui/react'
 
 import { motion } from 'framer-motion'
 
-import { PreferencesContext } from '../../../../context/PreferencesContext'
+import { PreferencesContext } from 'context/PreferencesContext'
 
 export const MotionStack = motion<StackProps>(Stack)
 

@@ -3,7 +3,7 @@ import { Box, Stack, Flex, Spacer } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/button'
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 
-import { Answer } from '../../types/quiz'
+import { Answer } from 'types/quiz'
 
 import Alternative from './Alternative'
 import Question from './Question'

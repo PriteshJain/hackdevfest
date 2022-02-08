@@ -2,8 +2,8 @@ import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/button'
 import { Image } from '@chakra-ui/image'
 
-import config from '../../config/quiz'
-import { getMessageByScore } from '../../helpers/getMessageByScore'
+import config from 'config/quiz'
+import { getMessageByScore } from 'helpers/getMessageByScore'
 
 type Props = {
   score: number

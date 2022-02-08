@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { FormControl, FormLabel } from '@chakra-ui/form-control'
 import { Radio, RadioGroup, HStack, Box } from '@chakra-ui/react'
 
-import { PreferencesContext } from '../../../context/PreferencesContext'
+import { PreferencesContext } from 'context/PreferencesContext'
 
 const DifficultyPanel = () => {
   

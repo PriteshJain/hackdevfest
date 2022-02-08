@@ -1,11 +1,11 @@
 import { Flex } from '@chakra-ui/layout'
 
-import useGame from './hooks/useGame'
+import useGame from 'hooks/useGame'
 
-import Header from './components/Ui/Header'
-import QuestionCard from './components/QuestionCard'
-import StartPanel from './components/StartPanel'
-import GameOverPanel from './components/GameOverPanel'
+import Header from 'components/Ui/Header'
+import QuestionCard from 'components/QuestionCard'
+import StartPanel from 'components/StartPanel'
+import GameOverPanel from 'components/GameOverPanel'
 
 import './App.css'
 
