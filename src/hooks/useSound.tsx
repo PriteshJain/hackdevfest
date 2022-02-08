@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import {Howl } from 'howler'
+import { Howl } from 'howler'
 
 const useSound = (path: string | string[]) => {
 

@@ -8,13 +8,7 @@ type Props = {
   startGame: VoidFunction
   isLoading: boolean
 }
-/**
- * 
-  position: fixed;
-  bottom: 20px;
-  border-radius: 50%;
-  right: 50px;
- */
+
 const StartPanel = ({ startGame, ...props }: Props) => {
   
   return (
@@ -35,7 +29,6 @@ const StartPanel = ({ startGame, ...props }: Props) => {
         </Button>
       </Box> 
     </Stack>
-    
   )
 }
 

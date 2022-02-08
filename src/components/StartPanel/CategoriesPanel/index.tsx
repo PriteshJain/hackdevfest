@@ -17,7 +17,7 @@ const CategoriesPanel = () => {
         ))}
       </SimpleGrid>
     </Box>
-  );
-};
+  )
+}
 
-export default CategoriesPanel;
+export default CategoriesPanel

@@ -36,7 +36,7 @@ const Category = ({ id, name, icon }: Props) => {
       </Flex>
       <Text fontWeight={600} color='white'>{ name }</Text>
     </MotionStack>
-  );
-};
+  )
+}
 
 export default Category

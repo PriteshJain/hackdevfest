@@ -2,7 +2,7 @@ import React, { useState,useContext } from 'react'
 
 import { Flex } from '@chakra-ui/layout'
 
-import useSound from './hooks/useSound';
+import useSound from './hooks/useSound'
 
 import { getQuestions } from './api/api'
 
@@ -69,9 +69,7 @@ const App = () => {
       setConfigQuiz((configQuiz) => ({ ...configQuiz, isGameOver: true }));
     else{
       setConfigQuiz((configQuiz) => ({ ...configQuiz, currentNumberQuestion: nextQuestion }))
-
       setIsButtonNextDisabled(true)
-
     }
   }
 
@@ -92,10 +90,10 @@ const App = () => {
           totalScore: configQuiz.totalScore + 1,
         }))
 
-        playCorrect();
+        playCorrect()
         
       }else {
-        playIncorrect();
+        playIncorrect()
       }
 
       const answer = {

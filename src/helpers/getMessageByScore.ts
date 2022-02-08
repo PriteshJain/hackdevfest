@@ -1,4 +1,4 @@
-import config from "../config/quiz"
+import config from '../config/quiz'
 import SadImage from '../assets/images/sad.png'
 import HappyImage from '../assets/images/happy.png'
 import ConfusedImage from '../assets/images/confused.png'

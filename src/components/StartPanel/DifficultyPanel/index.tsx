@@ -29,7 +29,7 @@ const DifficultyPanel = () => {
         </RadioGroup>
       </FormControl>
     </Box>
-  );
-};
+  )
+}
 
 export default DifficultyPanel

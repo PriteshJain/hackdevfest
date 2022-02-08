@@ -17,7 +17,6 @@ const Alternative = ({ title,isDisabled,isCorrect,isUserClicked,checkAnswer }: P
     ? 'red.400' 
     : '#aeb2bd'
 
-
   return (
     <Stack spacing='3'>
       <Button

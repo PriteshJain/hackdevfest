@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import config from "../config/quiz"
-import {  Preferences } from "../types/quiz"
+import React, { useState } from 'react'
+import config from '../config/quiz'
+import {  Preferences } from '../types/quiz'
 
 type StatePreferences = {
-  preferences: Preferences,
+  preferences: Preferences
   setPreferences: React.Dispatch<React.SetStateAction<Preferences>>
 }
 

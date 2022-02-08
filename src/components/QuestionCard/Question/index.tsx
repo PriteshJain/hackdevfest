@@ -14,7 +14,7 @@ type Props = {
 
 const Question = ({ title, currentNumberQuestion }: Props) => {
 
-  const { preferences } = useContext(PreferencesContext);
+  const { preferences } = useContext(PreferencesContext)
 
   return (
     <>

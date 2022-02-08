@@ -1,5 +1,5 @@
-import { shuffleArray } from "../helpers/shuffleArray";
-import { Question } from "../types/quiz";
+import { shuffleArray } from '../helpers/shuffleArray';
+import { Question } from '../types/quiz';
 
 export const getQuestions = async (amount: number, idCategory: number, difficulty: string) => {
   

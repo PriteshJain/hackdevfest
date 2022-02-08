@@ -1,4 +1,4 @@
-import { Flex, Heading, Spacer, Text } from '@chakra-ui/layout'
+import { Flex, Heading, Text } from '@chakra-ui/layout'
 import { Button } from '@chakra-ui/button'
 import { Image } from '@chakra-ui/image'
 

@@ -1,4 +1,4 @@
-import { Heading, Text, Container } from '@chakra-ui/layout'
+import { Heading, Container } from '@chakra-ui/layout'
 import { Stack } from '@chakra-ui/react'
 
 type Props = {
@@ -15,7 +15,6 @@ const Header = ({ content }: Props) => {
         { content }
       </Heading>
     </Stack>
-    
   )
 }
 
